@@ -8,7 +8,7 @@ public class TesteImpostos {
 
 	public static void main(String[] args) {
 
-		Orcamento orcamento = new Orcamento(new BigDecimal("100.00"));
+		Orcamento orcamento = new Orcamento(new BigDecimal("100.00"),1);
 		BigDecimal imposto = new CalculadoraImpostos().calcular(orcamento, new ICMS());
 		System.out.println("Valor imposto: " + imposto);
 	}
