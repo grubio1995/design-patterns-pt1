@@ -1,9 +1,6 @@
 package br.com.loja.alura.pedido;
 
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
-
-import br.com.loja.alura.orcamento.Orcamento;
 
 public class GeraPedido {
 
@@ -16,12 +13,19 @@ public class GeraPedido {
 		this.valorOrcamento = valorOrcamento;
 		this.quantidadeItens = quantidadeItens;
 	}
-	
-	public void executa() {
-		Orcamento orcamento = new Orcamento(this.valorOrcamento, this.quantidadeItens);		
-		Pedido pedido = new Pedido(this.cliente, LocalDateTime.now(), orcamento);
-		
-		System.out.println("Salvar pedido no bano de dados");
-		System.out.println("Enviar email com dados do novo pedido");
+
+	public String getCliente() {
+		return cliente;
 	}
+
+	public BigDecimal getValorOrcamento() {
+		return valorOrcamento;
+	}
+
+	public int getQuantidadeItens() {
+		return quantidadeItens;
+	}
+	
+
+	
 }
