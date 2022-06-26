@@ -18,7 +18,7 @@ public class Orcamento extends SituacaoOrcamento {
 	}
 
 	public void aplicarDescontoExtra() {
-		BigDecimal valorDoDescontoExtra = this.situacao.calcularValorDescontoExtra(this);'x'
+		BigDecimal valorDoDescontoExtra = this.situacao.calcularValorDescontoExtra(this);
 		this.valor = this.valor.subtract(valorDoDescontoExtra);
 	}
 	
